@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Feedback, Contact, Employee, Spam
+from .models import Feedback, Contact, Employee, Spam, Service
 
 
 def index(request):
@@ -34,7 +34,11 @@ def add_contact(request):
 
 
 def services(request):
-    return render(request, 'services.html')
+    list_service = Service.objects.all()
+    context = {
+        'list_service': list_service
+    }
+    return render(request, 'services.html', context=context)
 
 
 def team(request):

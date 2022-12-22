@@ -33,3 +33,15 @@ class Feedback(models.Model):
 class Spam(models.Model):
     email = models.EmailField()
 
+    def __str__(self):
+        return self.email
+
+
+class Service(models.Model):
+    name = models.CharField(max_length=20, verbose_name='Название')
+    text = models.CharField(max_length=100, verbose_name='Описание')
+    img = models.ImageField(upload_to='photos/', verbose_name='Фото')
+
+    def __str__(self):
+        return self.name
+

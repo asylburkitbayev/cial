@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Contact, Feedback, Employee, Spam
+from .models import Contact, Feedback, Employee, Spam, Service
 
 
 class ContactAdmin(admin.ModelAdmin):
@@ -18,6 +18,11 @@ class SpamAdmin(admin.ModelAdmin):
     list_display = ['email']
 
 
+class ServiceAdmin(admin.ModelAdmin):
+    list_display = ['name', 'text']
+
+
+admin.site.register(Service, ServiceAdmin)
 admin.site.register(Contact, ContactAdmin)
 admin.site.register(Feedback, FeedbackAdmin)
 admin.site.register(Employee, EmployeeAdmin)
