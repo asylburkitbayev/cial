@@ -7,7 +7,7 @@ class ContactAdmin(admin.ModelAdmin):
 
 
 class FeedbackAdmin(admin.ModelAdmin):
-    list_display = ['img', 'text']
+    list_display = ['text', 'img']
 
 
 class EmployeeAdmin(admin.ModelAdmin):

@@ -896,3 +896,20 @@ button {
 .margin_top_90{
   margin-top: 90px;
 }
+.c-button {
+  appearance: none;
+  border: 0;
+  border-radius: 5px;
+  background: red;
+  color: #fff;
+  padding: 8px 16px;
+  font-size: 16px;
+}
+.c-button:hover {
+  background: #1d49aa;
+}
+
+.c-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px #cbd6ee;
+}

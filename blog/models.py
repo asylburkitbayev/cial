@@ -24,7 +24,7 @@ class Contact(models.Model):
 
 class Feedback(models.Model):
     img = models.ImageField(upload_to='photos/', verbose_name='Фото')
-    text = models.CharField(max_length=50, verbose_name='Отзыв')
+    text = models.CharField(max_length=100, verbose_name='Отзыв')
 
     def __str__(self):
         return self.text
